@@ -26,13 +26,13 @@ public class JoinController {
     public String joinForm(Member member) {
         int result = joinService.join(member);
 
-        String url = "";
+        String url = "redirect:";
         if (result == 1) {
-            url = "index";
+            url = url + "/";
         } else if (result == 0) {
-            url = "error";
+            url = url + "/error";
         }
-        
+
         return url;
     }
 }
