@@ -1,4 +1,4 @@
-package totlwkr.tofhdnsakdmatotlwkr;
+package com.tofhdnsakdmatotlwkr;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

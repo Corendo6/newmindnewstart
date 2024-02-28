@@ -1,4 +1,4 @@
-package totlwkr.tofhdnsakdmatotlwkr;
+package com.tofhdnsakdmatotlwkr;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
