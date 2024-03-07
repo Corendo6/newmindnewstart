@@ -10,14 +10,17 @@ import com.tofhdnsakdmatotlwkr.repository.MemberRepository;
 public class JoinService {
 
     private MemberRepository memberRepository;
+    private EncryptService encryptService;
 
     @Autowired
-    public JoinService(MemberRepository memberRepository) {
+    public JoinService(MemberRepository memberRepository, EncryptService encryptService) {
         this.memberRepository = memberRepository;
+        this.encryptService = encryptService;
     }
 
     public int join(Member member) {
         int result = 0;
+        member.setPassword(encryptService.passEncode(member.getPassword()));
         Member resultEntity = memberRepository.save(member);
         if (resultEntity != null) {
             result = 1;
